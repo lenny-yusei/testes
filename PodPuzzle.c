@@ -13,7 +13,7 @@ typedef struct N {
 
 // 容器の数
 int pod_num;
-// この値は全ての容器の容量より常に大きくする
+// 変換用の基準値　この値は全ての容器の容量より常に大きくする
 int base = 10;
 
 
@@ -47,6 +47,7 @@ int main() {
 			printf("This number is not correct\n");
 			return 1;
 		}
+		// 基準値が常に最大になるようにする
 		else if (pod_capa[i] >= base)
 			base = pod_capa[i] + 1;
 	}
